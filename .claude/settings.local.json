@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:\\\\Users\\\\301022\\\\OneDrive - Cognizant\\\\MyNextJsProject\\\\liftingdiarycourse\" && npm install @clerk/nextjs)",
+      "Bash(cd \"/c/Users/301022/OneDrive - Cognizant/MyNextJsProject/liftingdiarycourse\" && npm run dev)",
+      "Bash(cd \"/c/Users/301022/OneDrive - Cognizant/MyNextJsProject/liftingdiarycourse\" && node -e \"const m = require\\('@clerk/nextjs'\\); console.log\\(Object.keys\\(m\\).filter\\(k => k.toLowerCase\\(\\).includes\\('sign'\\) || k.toLowerCase\\(\\).includes\\('auth'\\) || k.toLowerCase\\(\\).includes\\('user'\\)\\).sort\\(\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(cd \"/c/Users/301022/OneDrive - Cognizant/MyNextJsProject/liftingdiarycourse\" && node -e \"const m = require\\('@clerk/nextjs'\\); console.log\\(Object.keys\\(m\\).sort\\(\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(netstat -ano | findstr \":3000\")",
+      "WebSearch",
+      "Bash(claude mcp:*)",
+      "mcp__neon__list_projects",
+      "mcp__neon__get_database_tables",
+      "mcp__neon__get_connection_string",
+      "mcp__neon__describe_table_schema",
+      "mcp__neon__run_sql",
+      "mcp__neon__run_sql_transaction"
+    ]
+  }
+}

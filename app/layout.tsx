@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
+import HeaderAuth from "./components/HeaderAuth";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +29,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ClerkProvider>
+          <header className="flex items-center justify-end gap-4 px-6 py-4 border-b">
+            <HeaderAuth />
+          </header>
+          {children}
+        </ClerkProvider>
       </body>
     </html>
   );
