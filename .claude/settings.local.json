@@ -16,7 +16,9 @@
       "mcp__neon__run_sql_transaction",
       "Bash(find '/c/Users/301022/OneDrive - Cognizant/MyNextJsProject/liftingdiarycourse' -not -path */node_modules -not -path */.next -not -path */.git -type d)",
       "Bash(npx shadcn@latest init --yes)",
-      "Bash(npx shadcn@latest init --yes --defaults)"
+      "Bash(npx shadcn@latest init --yes --defaults)",
+      "Bash(npx shadcn@latest add calendar card popover --yes)",
+      "Bash(npm run:*)"
     ]
   }
 }
