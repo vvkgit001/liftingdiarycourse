@@ -13,7 +13,10 @@
       "mcp__neon__get_connection_string",
       "mcp__neon__describe_table_schema",
       "mcp__neon__run_sql",
-      "mcp__neon__run_sql_transaction"
+      "mcp__neon__run_sql_transaction",
+      "Bash(find '/c/Users/301022/OneDrive - Cognizant/MyNextJsProject/liftingdiarycourse' -not -path */node_modules -not -path */.next -not -path */.git -type d)",
+      "Bash(npx shadcn@latest init --yes)",
+      "Bash(npx shadcn@latest init --yes --defaults)"
     ]
   }
 }
