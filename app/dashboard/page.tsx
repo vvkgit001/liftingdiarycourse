@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { auth } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -37,9 +38,15 @@ export default async function DashboardPage({ searchParams }: DashboardPageProps
 
       {/* Workout list */}
       <section>
-        <h2 className="mb-4 text-lg font-semibold">
-          Workouts — {formatDate(date)}
-        </h2>
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-lg font-semibold">Workouts — {formatDate(date)}</h2>
+          <Link
+            href="/dashboard/workout/new"
+            className="inline-flex h-7 items-center justify-center rounded-lg bg-primary px-2.5 text-[0.8rem] font-medium text-primary-foreground transition-all"
+          >
+            Log workout
+          </Link>
+        </div>
 
         {workouts.length === 0 ? (
           <p className="text-sm text-muted-foreground">

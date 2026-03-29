@@ -2,6 +2,14 @@ import { db } from "@/db";
 import { workouts, workout_exercises } from "@/db/schema";
 import { eq, and, gte, lt, count } from "drizzle-orm";
 
+export async function createWorkout(userId: string, name: string, date: Date) {
+  const [workout] = await db
+    .insert(workouts)
+    .values({ user_id: userId, name, startedAt: date })
+    .returning();
+  return workout;
+}
+
 export async function getWorkoutsForUserByDate(userId: string, date: Date) {
   const start = new Date(date);
   start.setHours(0, 0, 0, 0);
@@ -22,8 +30,8 @@ export async function getWorkoutsForUserByDate(userId: string, date: Date) {
     .where(
       and(
         eq(workouts.user_id, userId),
-        gte(workouts.createdAt, start),
-        lt(workouts.createdAt, end)
+        gte(workouts.startedAt, start),
+        lt(workouts.startedAt, end)
       )
     )
     .groupBy(workouts.id);

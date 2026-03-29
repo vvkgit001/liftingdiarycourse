@@ -18,7 +18,10 @@
       "Bash(npx shadcn@latest init --yes)",
       "Bash(npx shadcn@latest init --yes --defaults)",
       "Bash(npx shadcn@latest add calendar card popover --yes)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest add input label --yes)",
+      "Bash(npx tsc:*)"
     ]
   }
 }
